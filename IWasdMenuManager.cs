@@ -4,7 +4,7 @@ namespace MapChooserAPI;
 public interface IWasdMenuManager
 {
     //create new menu object
-    public IWasdMenu CreateMenu(string title = "", bool freezePlayer = true);
+    public IWasdMenu CreateMenu(string title = "", bool freezePlayer = true, bool displayOptionsCount = false);
     //open the menu as main menu
     public void OpenMainMenu(CCSPlayerController? player, IWasdMenu? menu);
     //close all menus
@@ -15,4 +15,5 @@ public interface IWasdMenuManager
     public void CloseAllSubMenus(CCSPlayerController? player);
     //open menu as submenu
     public void OpenSubMenu(CCSPlayerController? player, IWasdMenu? menu);
+    public void CloseActiveMenu(IWasdMenu? menu);
 }
